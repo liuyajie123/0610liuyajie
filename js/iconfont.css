@@ -1,0 +1,43 @@
+
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1492588342014'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1492588342014#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1492588342014') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1492588342014') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1492588342014#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fangdajing:before { content: "\e634"; }
+
+.icon-gift:before { content: "\e62f"; }
+
+.icon-daxiang:before { content: "\e601"; }
+
+.icon-zhongguoditu:before { content: "\eb97"; }
+
+.icon-fo3:before { content: "\e607"; }
+
+.icon-zuobiao:before { content: "\e615"; }
+
+.icon-liberty1162759easyiconnet:before { content: "\e60d"; }
+
+.icon-daba:before { content: "\e612"; }
+
+.icon-yuanchandipinzhibz:before { content: "\e665"; }
+
+.icon-gangaotai:before { content: "\e62c"; }
+
+.icon-mianguan:before { content: "\e660"; }
+
+.icon-temple-of-heaven:before { content: "\e66f"; }
+
+.icon-lipinqia:before { content: "\f008b"; }
+

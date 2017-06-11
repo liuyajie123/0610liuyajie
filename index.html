@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <ul>
+        	<li>  
+                <span>
+                    只看免预约
+                </span>
+
+                <input type="checkbox" id="yy"/>
+
+                <label for="yy" class="fu">
+                    <i>√</i>
+                </label>
+            </li>
+        	<li>
+                <span>
+                    节假日可用
+                </span>
+                
+                <input type="checkbox" id="yys"/>
+
+                <label for="yys" class="fu">
+                    <i>√</i>
+                </label>
+                
+            </li>
+        </ul>
+    </header>       
+ <section>
+       <div class="ban">
+       <p>用餐人数</p>
+            <ul>
+                <li class="b" data-in="不限">不限</li>
+                <li data-in="单人餐" >单人餐</li>
+                <li data-in="双人餐" >双人餐</li>
+                <li data-in="3-4人餐" >3-4人餐</li>
+                <li data-in="5-10人餐" >5-10人餐</li>
+                <li data-in="10人以上" >10人以上</li>
+                <li data-in="代金券" >代金券</li> 
+                <li data-in="其他" >其他</li>
+            </ul>
+                
+        </div>
+
+        <p class="bot">
+            <span class="cz">重置</span>
+            <span class="bc">保存</span>
+        </p>
+ </section>
+      
+ 
+ 
+
+     
+     
+    
+    <footer class="footer">
+       
+    </footer> 
+<script src="./js/jquery1.7.js"></script>
+ <script>
+
+  $(function(){
+    var sb=null;
+     $(".ban ul li").on("click",function(){
+         $(this).css({"background":"#07ceb4","color":"white"}).siblings().css({"color":"#03c6ad","background":"none"})
+         sb=$(this).text()
+     })
+     $(".bc").on("click",function(){
+            localStorage.lastname=sb
+            console.log(localStorage)
+             $(".ban ul li").css({"background":"none","color":"#03c6ad"})
+     })
+
+     $(".cz").on("click",function(){
+          $(".b").css({"background":"#07ceb4","color":"white"}).siblings().css({"color":"#03c6ad","background":"none"})
+          $("#yy").prop({"checked":false})
+          $("#yys").prop({"checked":false})
+     })
+      var arr=[]
+      var brr=$(".ban ul li").length
+      for(var i=0;i<brr;i++){
+         arr.push($(".ban ul li").eq(i).attr("data-in"))  
+         if(arr[i]==localStorage.lastname){
+                 $(".ban ul li").eq(i).css({"background":"#07ceb4","color":"white"})
+            } 
+      }
+      console.log(arr)
+        
+      
+  })
+  
+ </script>   
+
+</body>
+</html>
